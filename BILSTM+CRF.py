@@ -384,6 +384,6 @@ while True:
         #log.write("DEV accuracy= " + str(evaluate(dev_instances, model))+"\n")
         print "DEV accuracy= " + str(evaluate(dev_instances, model))
 #        log.write("TST accuracy= " + str(evaluate(tst_instances, model))+"\n")
-        torch.save(model.state_dict(), "BILSTM+CRF_models/model."+str(timestep/trn_see/eval_see)+"\n")
+        torch.save(model.state_dict(), "BILSTM+CRF_models/model."+str(timestep/(trn_see*eval_see)))
         #log.flush()
 #log.close()
